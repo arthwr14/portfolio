@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fontes/JetBrainsMono-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: JetBrains Mono, Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(to right, #0D0A1D, #161226);
+}
+
+nav {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 25px;
+    text-align: end;
+    max-width: 1575px;
+    position: relative;
+}
+
+nav a {
+    background-color: magenta;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    transition: padding 0.25s;
+}
+
+nav a:hover {
+    padding: 12.5px 22.5px;
+    box-shadow: 1px 1px 10px rgba(255, 0, 255, 0.5);
+}
+
+nav a:active {
+    padding: 12.5px 22.5px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+}
+
+header {
+    background-color: #1F1C2C;
+    max-width: 1250px;
+    padding: 50px;
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.fotodeperfil {
+    border-style: solid;
+    border-width: 5px;
+    border-color: magenta;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    transition: width 0.25s, height 0.25s;
+}
+
+.fotodeperfil:hover {
+    box-shadow: 1px 1px 10px rgba(255, 0, 255, 0.5);
+    width: 257.5px;
+    height: 257.5px;
+}
+
+.print {
+    margin-top: 25px;
+}
+
+.front-end {
+    color: magenta;
+    font-weight: bold;
+}
+
+.descricao {
+    padding-bottom: 25px;
+}
+
+header a {
+    background-color: magenta;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    transition: padding 0.5s;
+}
+
+header a:hover {
+    box-shadow: 1px 1px 10px rgba(255, 0, 255, 0.5);
+    padding: 12.5px 22.5px;
+}
+
+header a:active {
+    padding: 12.5px 22.5px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+}
+
+header:hover {
+    box-shadow: 1px 1px 10px rgba(255, 0, 255, 0.5);
+}
