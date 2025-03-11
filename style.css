@@ -14,15 +14,16 @@
 
 body {
     background-image: linear-gradient(to right, #0D0A1D, #161226);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 nav {
-    text-align: center;
-    margin-top: 200px;
-    margin-bottom: 25px;
     text-align: end;
-    max-width: 1575px;
-    position: relative;
 }
 
 nav a {
@@ -30,8 +31,7 @@ nav a {
     padding: 10px 20px;
     border-radius: 20px;
     text-decoration: none;
-    font-weight: bold;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    font-weight: bolder;
     transition: padding 0.25s;
 }
 
@@ -116,7 +116,7 @@ header a {
     text-decoration: none;
     font-weight: bold;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
-    transition: padding 0.5s;
+    transition: padding 0.25s;
 }
 
 header a:hover {
