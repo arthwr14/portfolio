@@ -76,6 +76,33 @@ header {
 .front-end {
     color: magenta;
     font-weight: bold;
+    border-right: 2px solid;
+    width: 23ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: digitando 7s steps(23) infinite, piscando 0.5s step-end infinite alternate;
+}
+
+.front-end, .seu, .ponto {
+    display: inline-flex;
+}
+
+@keyframes digitando {
+    0% {
+        width: 0;
+    }
+    28.57% { /* 2 segundos de 7 segundos totais */
+        width: 23ch;
+    }
+    100% {
+        width: 23ch;
+    }
+}
+
+@keyframes piscando {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .descricao {
