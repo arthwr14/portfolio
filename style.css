@@ -24,6 +24,9 @@ body {
 
 nav {
     text-align: end;
+    position: relative;
+    top: -100px;
+    left: 50px;
 }
 
 nav a {
@@ -47,7 +50,6 @@ nav a:active {
 
 header {
     background-color: #1F1C2C;
-    max-width: 1250px;
     padding: 50px;
     border-radius: 20px;
     margin: auto;
