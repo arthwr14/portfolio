@@ -135,7 +135,7 @@ header a:active {
 }
 
 .projeto-fora {
-    background-color: #161226;
+    background-color: #57526A;
     width: 250px;
     display: inline-block;
     border-radius: 20px;
@@ -143,10 +143,14 @@ header a:active {
     padding-bottom: 25px;
     margin-top: 25px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.25s, transform 0.25s; 
 }
 
 .projeto-fora:hover {
     box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.25);
+    padding-top: 10px;
+    padding-bottom: 25px;
+    transform: scale(1.05);
 }
 
 .projeto-foto {
