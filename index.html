@@ -3,24 +3,514 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur | Portifólio</title>
+
+    <!-- SEO -->
+    <title>Arthur | Criação de Sites e Landing Pages em São Paulo</title>
+    <meta name="description" content="Criação de sites profissionais e landing pages em São Paulo. Sites rápidos, que funcionam em qualquer dispositivo, aparecem no Google e trazem clientes para o seu negócio. Peça um orçamento sem compromisso.">
+    <meta name="keywords" content="criação de sites, landing page, site profissional, site para empresas, desenvolvedor de sites, são paulo, santo amaro">
+    <meta name="author" content="Arthur">
+    <meta name="theme-color" content="#060814">
+
+    <!-- Open Graph (prévia do link no WhatsApp, Instagram, LinkedIn...) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Arthur | Criação de Sites e Landing Pages">
+    <meta property="og:description" content="Sites e landing pages que trazem clientes para o seu negócio. Rápidos, responsivos e otimizados para o Google.">
+    <meta property="og:image" content="imagens/og-foto.jpg">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Dados estruturados para o Google (negócio local) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Arthur | Criação de Sites e Landing Pages",
+        "description": "Criação de sites profissionais e landing pages para empresas, profissionais autônomos e empreendedores.",
+        "email": "arthurtt.contato@gmail.com",
+        "image": "imagens/og-foto.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        },
+        "areaServed": "BR",
+        "serviceType": ["Criação de sites", "Landing pages", "Reformulação de sites"]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header class="header">
-        <nav>
-            <a href="#">Início</a>
-            <a href="paginas/projetos.html">Projetos</a>
-            <a href="#">Habilidades</a>
-            <a href="#">Contato</a>
-        </nav>
-        <img src="imagens/fotodeperfil.png" alt="Foto de perfil" width="250" class="fotodeperfil">
-        <p class="print">print ("Olá, visitante!") &#128075;</p>
-        <h1>Eu sou <span class="arthur">Arthur</span>,</h1>
-        <p class="seu">seu&nbsp;<span class="front-end">desenvolvedor front-end</span>.</p>
-        <p class="descricao">Desenvolvo sites e landing pages com design moderno, atraente, funcional e responsivo.</p>
-        <a href="paginas/projetos.html" class="ver">Ver projetos</a>
+    <!-- Cabeçalho / Navegação -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <span class="logo-tag">&lt;</span>Arthur<span class="logo-tag"> /&gt;</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="#servicos">Serviços</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#faq">Dúvidas</a>
+                <a href="#contato" class="nav-mobile-cta">Pedir orçamento</a>
+            </nav>
+            <a href="#contato" class="btn-cta-nav">Pedir orçamento</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="eyebrow">📍 Criação de sites em São Paulo</span>
+                    <h1 class="hero-title">
+                        Sites e landing pages que <span class="highlight">trazem clientes</span> para o seu negócio
+                    </h1>
+                    <p class="descricao">
+                        Eu sou o Arthur e crio sites profissionais e rápidos, que ficam bonitos no computador, no tablet e no celular, feitos para apresentar a sua empresa e transformar visitantes em contatos no seu WhatsApp.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="https://wa.me/5511975868098?text=Ol%C3%A1%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20cria%C3%A7%C3%A3o%20de%20um%20site.%20Como%20funciona%3F" target="_blank" rel="noopener" class="btn-primary" data-wa="Olá! Vim pelo seu site e gostaria de solicitar um orçamento para a criação de um site. Como funciona?">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+                            Pedir orçamento no WhatsApp
+                        </a>
+                        <a href="#projetos" class="btn-secondary">Ver projetos</a>
+                    </div>
+                    <ul class="hero-checks">
+                        <li>Perfeito em qualquer tela</li>
+                        <li>Otimizado para o Google</li>
+                        <li>Orçamento sem compromisso</li>
+                    </ul>
+                </div>
+                <div class="hero-image-wrapper">
+                    <div class="profile-glow"></div>
+                    <img src="imagens/fotodeperfil.webp" alt="Foto de Arthur, desenvolvedor de sites" class="fotodeperfil" width="280" height="280" fetchpriority="high">
+                    <div class="profile-badge">
+                        <strong>Arthur</strong>
+                        <span>Desenvolvedor de sites · Ciência da Computação no Senac</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section id="servicos" class="servicos-section">
+            <div class="section-container">
+                <span class="section-kicker">Serviços</span>
+                <h2 class="section-title">O que eu posso fazer pelo seu negócio</h2>
+                <p class="section-subtitle">Escolha o formato ideal para o seu momento. Todos os projetos são feitos sob medida, com design exclusivo e pensados para gerar contatos.</p>
+
+                <div class="servicos-grid">
+                    <article class="servico-card">
+                        <div class="servico-icon">🎯</div>
+                        <h3>Landing Page</h3>
+                        <p class="servico-price"><small>a partir de</small> R$ 1.000</p>
+                        <p class="servico-desc">Uma página única e direta, focada em vender um produto, serviço ou captar contatos. Ideal para anúncios e campanhas.</p>
+                        <ul class="servico-list">
+                            <li>Página única com foco em conversão</li>
+                            <li>Botão de WhatsApp e formulário</li>
+                            <li>Textos e chamadas estratégicas</li>
+                            <li>Pronta para anúncios (Google e Meta)</li>
+                        </ul>
+                        <a href="https://wa.me/5511975868098?text=Ol%C3%A1%2C%20Arthur%21%20Tenho%20interesse%20em%20uma%20landing%20page." target="_blank" rel="noopener" class="servico-btn" data-wa="Olá, Arthur! Tenho interesse em uma landing page.">Quero uma landing page</a>
+                    </article>
+
+                    <article class="servico-card featured">
+                        <span class="servico-tag">Mais pedido</span>
+                        <div class="servico-icon">🏢</div>
+                        <h3>Site Institucional</h3>
+                        <p class="servico-price"><small>a partir de</small> R$ 2.000</p>
+                        <p class="servico-desc">O site completo da sua empresa, com várias seções ou páginas para apresentar quem você é, o que faz e como falar com você.</p>
+                        <ul class="servico-list">
+                            <li>Início, sobre, serviços e contato</li>
+                            <li>Galeria de fotos e depoimentos</li>
+                            <li>Mapa e integração com WhatsApp</li>
+                            <li>Otimizado para aparecer no Google</li>
+                        </ul>
+                        <a href="https://wa.me/5511975868098?text=Ol%C3%A1%2C%20Arthur%21%20Tenho%20interesse%20em%20um%20site%20institucional." target="_blank" rel="noopener" class="servico-btn" data-wa="Olá, Arthur! Tenho interesse em um site institucional.">Quero um site</a>
+                    </article>
+
+                    <article class="servico-card">
+                        <div class="servico-icon">✨</div>
+                        <h3>Reformulação de Site</h3>
+                        <p class="servico-price"><small>valor</small> sob consulta</p>
+                        <p class="servico-desc">Já tem um site, mas ele está antigo, lento ou não funciona bem no celular? Eu deixo ele moderno e eficiente de novo.</p>
+                        <ul class="servico-list">
+                            <li>Novo visual, moderno e profissional</li>
+                            <li>Adaptação para computador, tablet e celular</li>
+                            <li>Melhoria de velocidade</li>
+                            <li>Ajustes de SEO</li>
+                        </ul>
+                        <a href="https://wa.me/5511975868098?text=Ol%C3%A1%2C%20Arthur%21%20Quero%20reformular%20o%20site%20da%20minha%20empresa." target="_blank" rel="noopener" class="servico-btn" data-wa="Olá, Arthur! Quero reformular o site da minha empresa.">Quero reformular</a>
+                    </article>
+                </div>
+                <div class="manutencao-card">
+                    <div class="manutencao-info">
+                        <span class="manutencao-icon">🛠️</span>
+                        <div>
+                            <h3>Plano de manutenção: R$ 200/mês</h3>
+                            <p>Incluso em todos os projetos, para você não ter dor de cabeça depois que o site estiver no ar.</p>
+                        </div>
+                    </div>
+                    <ul class="manutencao-list">
+                        <li>Hospedagem do site</li>
+                        <li>Domínio (suaempresa.com.br)</li>
+                        <li>Site sempre no ar e seguro</li>
+                        <li>Suporte e pequenos ajustes</li>
+                    </ul>
+                </div>
+                <p class="servicos-note">Os valores de criação variam de acordo com o tamanho e as funcionalidades do projeto. <strong>Peça seu orçamento sem compromisso!</strong></p>
+            </div>
+        </section>
+
+        <!-- Diferenciais -->
+        <section id="diferenciais" class="diferenciais-section">
+            <div class="section-container">
+                <span class="section-kicker">Diferenciais</span>
+                <h2 class="section-title">Todo site que eu entrego vem com</h2>
+
+                <div class="diferenciais-grid">
+                    <div class="diferencial-card">
+                        <span class="dif-icon">📱</span>
+                        <h3>Perfeito em qualquer tela</h3>
+                        <p>Seu site fica bonito e fácil de usar no computador, no notebook, no tablet e no celular.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <span class="dif-icon">🔎</span>
+                        <h3>Pronto para o Google</h3>
+                        <p>Estrutura e textos otimizados (SEO) para o seu negócio ser encontrado por quem procura.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <span class="dif-icon">⚡</span>
+                        <h3>Carregamento rápido</h3>
+                        <p>Site lento perde cliente. Cada página é otimizada para abrir em poucos segundos.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <span class="dif-icon">💬</span>
+                        <h3>Contato em um clique</h3>
+                        <p>Botão de WhatsApp, formulário e mapa para o cliente falar com você na hora.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <span class="dif-icon">🎨</span>
+                        <h3>Design exclusivo</h3>
+                        <p>Nada de modelo genérico: o visual é criado de acordo com a identidade da sua marca.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <span class="dif-icon">🤝</span>
+                        <h3>Atendimento direto</h3>
+                        <p>Você fala direto comigo, do primeiro contato até o site no ar, sem intermediários.</p>
+                    </div>
+                </div>
+                <p class="tech-line">Tecnologias que utilizo: <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Git</span></p>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="projetos-section">
+            <div class="section-container">
+                <span class="section-kicker">Projetos</span>
+                <h2 class="section-title">Veja alguns exemplos do meu trabalho</h2>
+                <p class="section-subtitle">Projetos conceito criados para mostrar como pode ficar o site do seu negócio. Clique para ver cada um funcionando.</p>
+
+                <div class="projetos-grid">
+                    <article class="projeto-card">
+                        <a href="demos/clinica-sorriso.html" target="_blank" rel="noopener" class="projeto-preview" aria-label="Abrir o projeto Clínica Sorriso Leve">
+                            <div class="mockup-header">
+                                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                                <span class="mockup-url">demos/clinica-sorriso</span>
+                            </div>
+                            <div class="preview-frame">
+                                <iframe src="demos/clinica-sorriso.html" title="Prévia: Clínica Sorriso Leve" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                            </div>
+                        </a>
+                        <div class="projeto-info">
+                            <span class="proj-category">Site institucional · Saúde</span>
+                            <h3 class="proj-title">Clínica Sorriso Leve</h3>
+                            <p class="proj-desc">Site para clínica odontológica com apresentação dos tratamentos, equipe, depoimentos e agendamento direto pelo WhatsApp.</p>
+                            <a href="demos/clinica-sorriso.html" target="_blank" rel="noopener" class="proj-link">Ver site ao vivo ↗</a>
+                        </div>
+                    </article>
+
+                    <article class="projeto-card">
+                        <a href="demos/brasa-burger.html" target="_blank" rel="noopener" class="projeto-preview" aria-label="Abrir o projeto Brasa Burger">
+                            <div class="mockup-header">
+                                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                                <span class="mockup-url">demos/brasa-burger</span>
+                            </div>
+                            <div class="preview-frame">
+                                <iframe src="demos/brasa-burger.html" title="Prévia: Brasa Burger" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                            </div>
+                        </a>
+                        <div class="projeto-info">
+                            <span class="proj-category">Site · Restaurante</span>
+                            <h3 class="proj-title">Brasa Burger</h3>
+                            <p class="proj-desc">Site para hamburgueria artesanal com cardápio, horário de funcionamento, localização e pedido pelo WhatsApp.</p>
+                            <a href="demos/brasa-burger.html" target="_blank" rel="noopener" class="proj-link">Ver site ao vivo ↗</a>
+                        </div>
+                    </article>
+
+                    <article class="projeto-card">
+                        <a href="demos/personal-rafa.html" target="_blank" rel="noopener" class="projeto-preview" aria-label="Abrir o projeto Rafa Moreno Personal Trainer">
+                            <div class="mockup-header">
+                                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                                <span class="mockup-url">demos/personal-rafa</span>
+                            </div>
+                            <div class="preview-frame">
+                                <iframe src="demos/personal-rafa.html" title="Prévia: Rafa Moreno Personal Trainer" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                            </div>
+                        </a>
+                        <div class="projeto-info">
+                            <span class="proj-category">Landing page · Fitness</span>
+                            <h3 class="proj-title">Rafa Moreno Personal</h3>
+                            <p class="proj-desc">Landing page de alta conversão para personal trainer, com planos, resultados de alunos e chamada para aula experimental.</p>
+                            <a href="demos/personal-rafa.html" target="_blank" rel="noopener" class="proj-link">Ver site ao vivo ↗</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="outros-projetos">
+                    <h3>Outros projetos pessoais</h3>
+                    <div class="outros-grid">
+                        <div class="outro-item">
+                            <strong>VTXon</strong>
+                            <span>Rede social para os moradores da minha cidade natal, com posts, fórum e perfis de usuário. Feita com React e Supabase.</span>
+                        </div>
+                        <div class="outro-item">
+                            <strong>Hyperium</strong>
+                            <span>Launcher desktop e servidor de minigames para Minecraft, desenvolvidos com Electron, Node.js e Java.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Como funciona -->
+        <section id="como-funciona" class="processo-section">
+            <div class="section-container">
+                <span class="section-kicker">Como funciona</span>
+                <h2 class="section-title">Do primeiro contato ao site no ar</h2>
+
+                <ol class="processo-grid">
+                    <li class="processo-step">
+                        <span class="step-num">1</span>
+                        <h3>Conversa</h3>
+                        <p>Você me conta sobre o seu negócio, seus clientes e o que espera do site.</p>
+                    </li>
+                    <li class="processo-step">
+                        <span class="step-num">2</span>
+                        <h3>Proposta</h3>
+                        <p>Envio um orçamento claro, com tudo o que está incluso, valor e prazo de entrega.</p>
+                    </li>
+                    <li class="processo-step">
+                        <span class="step-num">3</span>
+                        <h3>Criação</h3>
+                        <p>Desenvolvo o site e te mostro a primeira versão para você acompanhar tudo de perto.</p>
+                    </li>
+                    <li class="processo-step">
+                        <span class="step-num">4</span>
+                        <h3>Ajustes</h3>
+                        <p>Fazemos juntos os ajustes necessários até o site ficar do jeito que você quer.</p>
+                    </li>
+                    <li class="processo-step">
+                        <span class="step-num">5</span>
+                        <h3>Site no ar</h3>
+                        <p>Publico o site no seu domínio e te mostro como tudo funciona. Pronto para receber clientes!</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre" class="sobre-section">
+            <div class="section-container">
+                <div class="sobre-card">
+                    <div class="sobre-text">
+                        <span class="section-kicker">Sobre mim</span>
+                        <h2 class="section-title">Prazer, eu sou o Arthur</h2>
+                        <p>Sou estudante de <strong>Ciência da Computação no Senac Santo Amaro</strong>, em São Paulo, e crio sites e landing pages para empresas, profissionais autônomos e empreendedores que querem marcar presença na internet e atrair mais clientes.</p>
+                        <p>Programo desde cedo e já desenvolvi desde redes sociais até aplicações desktop. Hoje uso essa experiência para entregar sites que, além de bonitos, geram resultado: carregam rápido, funcionam bem em qualquer tela, aparecem no Google e facilitam o contato do cliente com você.</p>
+                        <p>Meu compromisso é com um atendimento próximo e transparente: você fala direto comigo e acompanha cada etapa do projeto.</p>
+                    </div>
+                    <div class="sobre-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-val">100%</span>
+                            <span class="highlight-lbl">Responsivo</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-val">SEO</span>
+                            <span class="highlight-lbl">Otimizado para o Google</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-val">1:1</span>
+                            <span class="highlight-lbl">Atendimento direto</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq-section">
+            <div class="section-container faq-container">
+                <span class="section-kicker">Dúvidas frequentes</span>
+                <h2 class="section-title">Perguntas frequentes</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Quanto custa um site?</summary>
+                        <p>Landing pages partem de R$ 1.000 e sites institucionais de R$ 2.000. O valor final depende da quantidade de páginas e das funcionalidades. Além disso, há o plano de manutenção de R$ 200/mês, que cobre hospedagem, domínio, suporte e pequenos ajustes. Me conte o que você precisa e eu envio um orçamento detalhado, sem compromisso.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Quanto tempo leva para o site ficar pronto?</summary>
+                        <p>O prazo é combinado na proposta, antes de começar, e depende do tamanho do site e da rapidez no envio de textos e fotos. Landing pages costumam ficar prontas bem rápido.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Preciso ter domínio e hospedagem?</summary>
+                        <p>Não precisa se preocupar com isso. Hospedagem e domínio (ex.: suaempresa.com.br) já estão inclusos no plano de manutenção, e eu cuido de toda a publicação do site. O domínio é registrado no nome da sua empresa, então ele é sempre seu.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Preciso ter os textos e as fotos prontos?</summary>
+                        <p>Ajuda bastante, mas não é obrigatório. Eu te ajudo a organizar as informações e escrever textos que vendem. Se não tiver fotos, podemos usar imagens profissionais de bancos de imagens.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>E se eu precisar mudar algo depois que o site estiver no ar?</summary>
+                        <p>Sem problemas. Pequenos ajustes, como trocar textos, fotos, telefone ou horário, estão inclusos no plano de manutenção. Mudanças maiores, como novas páginas ou funcionalidades, são orçadas à parte.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Você atende fora de São Paulo?</summary>
+                        <p>Sim! Atendo clientes de todo o Brasil. Todo o processo pode ser feito online, por WhatsApp, e-mail ou videochamada.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="contato-section">
+            <div class="section-container">
+                <span class="section-kicker">Contato</span>
+                <h2 class="section-title">Vamos tirar sua ideia do papel?</h2>
+                <p class="section-subtitle">Me conte sobre o seu negócio e receba um orçamento sem compromisso. Respondo o mais rápido possível!</p>
+
+                <div class="contato-wrapper">
+                    <div class="contato-details">
+                        <a href="https://wa.me/5511975868098?text=Ol%C3%A1%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20cria%C3%A7%C3%A3o%20de%20um%20site.%20Como%20funciona%3F" target="_blank" rel="noopener" class="contato-wa" data-wa="Olá! Vim pelo seu site e gostaria de solicitar um orçamento para a criação de um site. Como funciona?">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+                            <span>
+                                <strong>Falar no WhatsApp</strong>
+                                <small>A forma mais rápida de falar comigo</small>
+                            </span>
+                        </a>
+
+                        <ul class="contato-list">
+                            <li>
+                                <span class="contato-icon">📧</span>
+                                <a href="mailto:arthurtt.contato@gmail.com">arthurtt.contato@gmail.com</a>
+                            </li>
+                            <li>
+                                <span class="contato-icon">📍</span>
+                                <span>São Paulo, SP / Atendimento para todo o Brasil</span>
+                            </li>
+                        </ul>
+
+                        <div class="social-links">
+                            <a href="#" target="_blank" rel="noopener" class="social-btn instagram-btn" data-social="instagram" aria-label="Instagram" hidden>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="social-btn linkedin-btn" data-social="linkedin" aria-label="LinkedIn" hidden>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="social-btn github-btn" data-social="github" aria-label="GitHub" hidden>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contato-form-card">
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Seu nome</label>
+                                    <input type="text" id="name" name="nome" required autocomplete="name" placeholder="Como posso te chamar?">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">WhatsApp</label>
+                                    <input type="tel" id="phone" name="whatsapp" autocomplete="tel" placeholder="(11) 90000-0000">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Seu e-mail</label>
+                                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="email@exemplo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tipo">Tipo de projeto</label>
+                                    <select id="tipo" name="tipo_de_projeto">
+                                        <option>Landing page</option>
+                                        <option>Site institucional</option>
+                                        <option>Reformulação de site</option>
+                                        <option>Ainda não sei</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Conte sobre o seu negócio</label>
+                                <textarea id="message" name="mensagem" rows="5" required placeholder="Qual é o seu negócio e o que você espera do site?"></textarea>
+                            </div>
+                            <!-- Campo anti-spam: fica invisível para pessoas -->
+                            <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <button type="submit" class="btn-submit">Enviar mensagem</button>
+                            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#inicio" class="logo"><span class="logo-tag">&lt;</span>Arthur<span class="logo-tag"> /&gt;</span></a>
+                <p>Criação de sites e landing pages em São Paulo.</p>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:arthurtt.contato@gmail.com">arthurtt.contato@gmail.com</a>
+                <a href="https://wa.me/5511975868098?text=Ol%C3%A1%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20cria%C3%A7%C3%A3o%20de%20um%20site.%20Como%20funciona%3F" target="_blank" rel="noopener" data-wa="Olá! Vim pelo seu site e gostaria de solicitar um orçamento para a criação de um site. Como funciona?">WhatsApp</a>
+            </div>
+            <p class="footer-copy">&copy; <span id="year">2026</span> Arthur. Todos os direitos reservados.</p>
+            <a href="#inicio" class="back-to-top" aria-label="Voltar para o topo">↑</a>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante de WhatsApp -->
+    <a href="https://wa.me/5511975868098?text=Ol%C3%A1%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20a%20cria%C3%A7%C3%A3o%20de%20um%20site.%20Como%20funciona%3F" target="_blank" rel="noopener" class="wa-float" data-wa="Olá! Vim pelo seu site e gostaria de solicitar um orçamento para a criação de um site. Como funciona?" aria-label="Falar no WhatsApp">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+    </a>
+
+    <!-- Ícones reutilizáveis -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.725 1.45 5.589 0 10.137-4.547 10.141-10.13.002-2.703-1.047-5.245-2.955-7.155S14.12 1.15 11.417 1.15c-5.59 0-10.14 4.548-10.144 10.132-.001 1.849.499 3.655 1.446 5.23L1.734 20.89l4.913-1.736zm11.729-6.825c-.3-.149-1.772-.874-2.047-.975-.276-.101-.476-.149-.676.149-.2.3-.777.975-.951 1.174-.176.2-.351.224-.651.074-2.01-.986-3.14-1.928-4.22-3.79-.283-.487.283-.45.81-1.5.083-.176.042-.328-.021-.478-.063-.149-.676-1.628-.926-2.229-.244-.589-.492-.51-.675-.519-.174-.009-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.224 5.112 4.521.714.308 1.272.492 1.707.63.718.228 1.37.196 1.885.12.574-.085 1.772-.724 2.022-1.424.25-.699.25-1.299.175-1.424-.075-.125-.275-.199-.575-.349z"/></symbol>
+    </svg>
+
+    <script src="script.js"></script>
 </body>
 </html>

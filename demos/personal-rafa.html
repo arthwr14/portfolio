@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafa Moreno | Personal Trainer em São Paulo</title>
+    <meta name="description" content="Projeto conceito de landing page para personal trainer, desenvolvido por Arthur.">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c6f432'/%3E%3Cpath d='M36 6 16 36h14l-4 22 22-32H34z' fill='%230b0b0c'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lime: #c6f432;
+            --lime-dark: #a8d81c;
+            --bg: #0b0b0c;
+            --bg-2: #141416;
+            --card: #1a1a1d;
+            --line: #2a2a2e;
+            --text: #f4f4f5;
+            --muted: #a1a1aa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Archivo', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        a { color: inherit; text-decoration: none; }
+        img { display: block; max-width: 100%; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .icon { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+        .concept-bar { background: var(--lime); color: #111; font-size: 0.82rem; text-align: center; padding: 8px 16px; font-weight: 500; }
+        .concept-bar a { font-weight: 800; text-decoration: underline; }
+
+        .nav { display: flex; justify-content: space-between; align-items: center; height: 78px; }
+        .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 1.2rem; letter-spacing: -0.5px; text-transform: uppercase; }
+        .brand svg { width: 36px; height: 36px; }
+        .brand span { color: var(--lime); }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--lime); color: #0b0b0c; padding: 16px 28px; border-radius: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.3px; font-size: 0.92rem; transition: 0.2s; }
+        .btn:hover { background: var(--lime-dark); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(198, 244, 50, 0.25); }
+        .btn svg { width: 18px; height: 18px; fill: currentColor; }
+        .btn-sm { padding: 10px 18px; font-size: 0.8rem; }
+
+        .hero { padding: 50px 0 90px; }
+        .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 50px; align-items: center; }
+        .kicker { display: inline-flex; gap: 8px; align-items: center; border: 1px solid var(--line); padding: 6px 14px; border-radius: 30px; font-size: 0.85rem; color: var(--muted); margin-bottom: 20px; }
+        .kicker b { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 10px var(--lime); }
+        .hero h1 { font-size: 4.2rem; line-height: 0.98; font-weight: 900; text-transform: uppercase; letter-spacing: -2px; margin-bottom: 22px; }
+        .hero h1 span { color: var(--lime); }
+        .hero p { color: var(--muted); font-size: 1.15rem; max-width: 500px; margin-bottom: 30px; }
+        .note { margin-top: 14px; font-size: 0.85rem; color: var(--muted); }
+        .photo { position: relative; border-radius: 28px; overflow: hidden; border: 1px solid var(--line); }
+        .photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+        .photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(11, 11, 12, 0.85) 100%); }
+        .photo-tag { position: absolute; bottom: 18px; left: 18px; right: 18px; z-index: 1; font-size: 0.9rem; }
+        .photo-tag strong { display: block; font-size: 1.2rem; color: var(--lime); }
+        .photo-tag span { color: #d4d4d8; }
+
+        .numbers { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .numbers .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+        .num { padding: 30px 10px; text-align: center; border-right: 1px solid var(--line); }
+        .num:last-child { border-right: none; }
+        .num strong { display: block; font-size: 2.3rem; font-weight: 900; color: var(--lime); line-height: 1.2; }
+        .num span { color: var(--muted); font-size: 0.9rem; }
+
+        section { padding: 90px 0; }
+        .title { text-align: center; max-width: 660px; margin: 0 auto 48px; }
+        .title h2 { font-size: 2.6rem; line-height: 1.1; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 12px; }
+        .title h2 span { color: var(--lime); }
+        .title p { color: var(--muted); }
+
+        .pains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .pain { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 28px; transition: 0.25s; }
+        .pain:hover { border-color: var(--lime); transform: translateY(-4px); }
+        .pain .i { width: 52px; height: 52px; border-radius: 14px; background: rgba(198, 244, 50, 0.1); color: var(--lime); display: grid; place-items: center; margin-bottom: 16px; }
+        .pain h3 { font-size: 1.15rem; margin-bottom: 6px; }
+        .pain p { color: var(--muted); font-size: 0.95rem; }
+
+        .method { background: var(--bg-2); }
+        .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+        .method-imgs { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 16px; align-items: end; }
+        .method-imgs img { border-radius: 22px; width: 100%; object-fit: cover; }
+        .method-imgs img:first-child { aspect-ratio: 10 / 11; }
+        .method-imgs img:last-child { aspect-ratio: 4 / 5; }
+        .method h2 { font-size: 2.4rem; line-height: 1.1; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 18px; }
+        .method h2 span { color: var(--lime); }
+        .steps { list-style: none; display: grid; gap: 18px; margin: 24px 0 32px; }
+        .steps li { display: flex; gap: 16px; }
+        .steps b { width: 36px; height: 36px; flex-shrink: 0; border-radius: 50%; background: var(--lime); color: #111; display: grid; place-items: center; font-weight: 900; }
+        .steps strong { display: block; }
+        .steps span { color: var(--muted); font-size: 0.95rem; }
+
+        .cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .case { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 26px; }
+        .case .res { display: inline-block; background: rgba(198, 244, 50, 0.12); color: var(--lime); font-weight: 800; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; margin-bottom: 14px; }
+        .case p { color: var(--muted); margin-bottom: 16px; font-size: 0.95rem; }
+        .who { display: flex; align-items: center; gap: 12px; }
+        .who b { width: 40px; height: 40px; border-radius: 50%; background: #26262b; color: var(--lime); display: grid; place-items: center; font-size: 0.85rem; }
+
+        .plans-bg { background: var(--bg-2); }
+        .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+        .plan { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 32px 28px; display: flex; flex-direction: column; }
+        .plan.hot { border: 2px solid var(--lime); position: relative; transform: scale(1.03); }
+        .plan.hot::before { content: 'Mais escolhido'; position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--lime); color: #111; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; white-space: nowrap; }
+        .plan h3 { font-size: 1.2rem; text-transform: uppercase; }
+        .plan .price { font-size: 2.6rem; font-weight: 900; margin: 10px 0 4px; }
+        .plan .price small { font-size: 1rem; color: var(--muted); font-weight: 500; }
+        .plan ul { list-style: none; display: grid; gap: 10px; margin: 20px 0 28px; flex-grow: 1; }
+        .plan li::before { content: '✓'; color: var(--lime); font-weight: 900; margin-right: 10px; }
+        .plan:not(.hot) .btn { background: transparent; color: var(--text); border: 1px solid var(--line); }
+        .plan:not(.hot) .btn:hover { border-color: var(--lime); color: var(--lime); box-shadow: none; }
+
+        .final { position: relative; text-align: center; background: url('img/personal/fundo.webp') center / cover no-repeat; padding: 130px 0; }
+        .final::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11, 11, 12, 0.92), rgba(11, 11, 12, 0.75)); }
+        .final .wrap { position: relative; }
+        .final h2 { font-size: 3.2rem; line-height: 1.02; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 16px; }
+        .final h2 span { color: var(--lime); }
+        .final p { color: #d4d4d8; margin-bottom: 30px; }
+
+        footer { border-top: 1px solid var(--line); padding: 26px 0; color: var(--muted); font-size: 0.88rem; }
+        footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+        .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .js .reveal.in { opacity: 1; transform: none; }
+        .js .plan.hot.reveal.in { transform: scale(1.03); }
+
+        @media (max-width: 900px) {
+            .hero-grid, .method-grid { grid-template-columns: 1fr; }
+            .photo { max-width: 400px; width: 100%; margin: 0 auto; }
+            .pains, .cases, .plans { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
+            .plan.hot, .js .plan.hot.reveal.in { transform: none; }
+            .numbers .wrap { grid-template-columns: 1fr 1fr; }
+            .num:nth-child(2) { border-right: none; }
+            .num:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.8rem; }
+            .title h2, .final h2, .method h2 { font-size: 2rem; }
+        }
+        @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } }
+    </style>
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+        <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-7"/></symbol>
+        <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6A8 8 0 1 1 21 12z"/></symbol>
+        <symbol id="i-wa" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.725 1.45 5.589 0 10.137-4.547 10.141-10.13.002-2.703-1.047-5.245-2.955-7.155S14.12 1.15 11.417 1.15c-5.59 0-10.14 4.548-10.144 10.132-.001 1.849.499 3.655 1.446 5.23L1.734 20.89l4.913-1.736zm11.729-6.825c-.3-.149-1.772-.874-2.047-.975-.276-.101-.476-.149-.676.149-.2.3-.777.975-.951 1.174-.176.2-.351.224-.651.074-2.01-.986-3.14-1.928-4.22-3.79-.283-.487.283-.45.81-1.5.083-.176.042-.328-.021-.478-.063-.149-.676-1.628-.926-2.229-.244-.589-.492-.51-.675-.519-.174-.009-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.224 5.112 4.521.714.308 1.272.492 1.707.63.718.228 1.37.196 1.885.12.574-.085 1.772-.724 2.022-1.424.25-.699.25-1.299.175-1.424-.075-.125-.275-.199-.575-.349z"/></symbol>
+    </svg>
+
+    <div class="concept-bar">Projeto conceito com empresa fictícia, desenvolvido por Arthur. <a href="../index.html#projetos" target="_top">← Voltar ao portfólio</a></div>
+
+    <div class="wrap nav">
+        <a href="#" class="brand">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#c6f432"/><path d="M36 6 16 36h14l-4 22 22-32H34z" fill="#0b0b0c"/></svg>
+            Rafa<span>Moreno</span>
+        </a>
+        <a href="#planos" class="btn btn-sm">Aula grátis</a>
+    </div>
+
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div class="reveal">
+                <span class="kicker"><b></b> Personal trainer · Presencial em SP e online</span>
+                <h1>Chega de começar <span>toda segunda</span></h1>
+                <p>Treino personalizado e acompanhamento de perto para você finalmente ter constância e ver resultado, mesmo com a rotina corrida.</p>
+                <a href="#planos" class="btn">Agendar aula experimental grátis</a>
+                <p class="note">Sem compromisso · Vagas limitadas este mês</p>
+            </div>
+            <div class="photo reveal">
+                <img src="img/personal/rafa.webp" alt="Rafa Moreno, personal trainer, treinando com halteres" width="800" height="1000" fetchpriority="high">
+                <div class="photo-tag"><strong>Rafa Moreno</strong><span>Educador físico · Emagrecimento e hipertrofia</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="numbers">
+        <div class="wrap">
+            <div class="num"><strong>+300</strong><span>alunos treinados</span></div>
+            <div class="num"><strong>8 anos</strong><span>de experiência</span></div>
+            <div class="num"><strong>45 min</strong><span>treinos eficientes</span></div>
+            <div class="num"><strong>100%</strong><span>personalizado</span></div>
+        </div>
+    </div>
+
+    <section>
+        <div class="wrap">
+            <div class="title reveal">
+                <h2>Você se identifica com <span>algum desses?</span></h2>
+                <p>Se sim, o problema não é falta de força de vontade. É falta de um plano feito para você.</p>
+            </div>
+            <div class="pains">
+                <div class="pain reveal"><div class="i"><svg class="icon"><use href="#i-clock"/></svg></div><h3>Falta de tempo</h3><p>Treinos curtos e objetivos que cabem na sua agenda, em casa, na academia ou no parque.</p></div>
+                <div class="pain reveal"><div class="i"><svg class="icon"><use href="#i-chart"/></svg></div><h3>Sem resultado</h3><p>Planejamento com metas claras e avaliações periódicas para você ver sua evolução.</p></div>
+                <div class="pain reveal"><div class="i"><svg class="icon"><use href="#i-chat"/></svg></div><h3>Desmotivação</h3><p>Acompanhamento próximo pelo WhatsApp para você não desistir no meio do caminho.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="method">
+        <div class="wrap method-grid">
+            <div class="method-imgs reveal">
+                <img src="img/personal/acompanhamento.webp" alt="Personal trainer comemorando com aluna durante o treino" width="1000" height="700" loading="lazy">
+                <img src="img/personal/treino.webp" alt="Personal trainer corrigindo a postura de aluna no levantamento de peso" width="800" height="1000" loading="lazy">
+            </div>
+            <div class="reveal">
+                <h2>Um método simples, <span>que funciona</span></h2>
+                <ol class="steps">
+                    <li><b>1</b><div><strong>Avaliação completa</strong><span>Entendo sua rotina, seu histórico e seu objetivo.</span></div></li>
+                    <li><b>2</b><div><strong>Treino sob medida</strong><span>Exercícios pensados para o seu corpo e o seu tempo.</span></div></li>
+                    <li><b>3</b><div><strong>Acompanhamento de perto</strong><span>Correção de postura, ajustes e motivação em cada sessão.</span></div></li>
+                    <li><b>4</b><div><strong>Resultado medido</strong><span>Reavaliações periódicas para você ver sua evolução.</span></div></li>
+                </ol>
+                <a href="#planos" class="btn">Quero começar</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="title reveal"><h2>Resultados de <span>alunos reais</span></h2></div>
+            <div class="cases">
+                <div class="case reveal"><span class="res">-11 kg em 4 meses</span><p>"Nunca tinha conseguido manter um treino por mais de um mês. Com o Rafa virou rotina."</p><div class="who"><b>FE</b><strong>Fernanda, 34</strong></div></div>
+                <div class="case reveal"><span class="res">+6 kg de massa magra</span><p>"Treinos inteligentes, sem enrolação. Evoluí mais em 6 meses do que em 2 anos sozinho."</p><div class="who"><b>TH</b><strong>Thiago, 27</strong></div></div>
+                <div class="case reveal"><span class="res">Fim das dores nas costas</span><p>"Comecei pela saúde e hoje treino por prazer. Atenção total em cada exercício."</p><div class="who"><b>SÔ</b><strong>Sônia, 52</strong></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="plans-bg">
+        <div class="wrap">
+            <div class="title reveal">
+                <h2>Escolha o seu <span>plano</span></h2>
+                <p>Todos os planos começam com uma aula experimental gratuita e avaliação física.</p>
+            </div>
+            <div class="plans">
+                <div class="plan reveal">
+                    <h3>Online</h3>
+                    <div class="price">R$ 149<small>/mês</small></div>
+                    <ul><li>Treino personalizado no app</li><li>Vídeos de execução</li><li>Ajustes mensais</li><li>Suporte pelo WhatsApp</li></ul>
+                    <a href="#" class="btn">Quero esse</a>
+                </div>
+                <div class="plan hot reveal">
+                    <h3>Presencial 2x</h3>
+                    <div class="price">R$ 480<small>/mês</small></div>
+                    <ul><li>2 aulas presenciais por semana</li><li>Treino extra para os outros dias</li><li>Avaliação física mensal</li><li>Suporte pelo WhatsApp</li></ul>
+                    <a href="#" class="btn">Quero esse</a>
+                </div>
+                <div class="plan reveal">
+                    <h3>Presencial 3x</h3>
+                    <div class="price">R$ 680<small>/mês</small></div>
+                    <ul><li>3 aulas presenciais por semana</li><li>Orientação alimentar básica</li><li>Avaliação física mensal</li><li>Prioridade de horários</li></ul>
+                    <a href="#" class="btn">Quero esse</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final">
+        <div class="wrap reveal">
+            <h2>Sua primeira aula<br><span>é por minha conta</span></h2>
+            <p>Me chama no WhatsApp e vamos marcar sua aula experimental.</p>
+            <a href="#" class="btn"><svg><use href="#i-wa"/></svg> Agendar pelo WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <span>© Rafa Moreno Personal Trainer</span>
+            <span>Projeto conceito criado por <a href="../index.html" target="_top"><strong>Arthur</strong></a></span>
+        </div>
+    </footer>
+
+    <script>
+        document.documentElement.classList.add('js');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+</body>
+</html>
